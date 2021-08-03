@@ -1,0 +1,31 @@
+#Main parameters
+episode_batch: 400
+
+
+#Learner parameters
+gamma: 0.99
+batch_size: 256
+target_update: 10000
+polyak_factor_Q: 0.001
+polyak_factor_param: 0.000075
+min_replay_size: 256
+
+#Actors parameters
+EPS_START: 0.9
+EPS_DECAY: 2000
+EPS_END: 0.05
+
+#Network parameters
+learning_rate: 0.001
+learning_rate_param : 0.001
+hidden_size: 128
+optimizer: "Adam"
+
+#parameters replay buffer
+size_buffer: 80000
+ev: "LL"
+seed: 2
+#Environment
+params_range: [-1,1]
+input_shape: 8
+n_actions: 5
