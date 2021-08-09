@@ -1,0 +1,41 @@
+#Main parameters
+episode_batch: 100
+n_actors: 2
+
+min_epsilons: [0.01, 0.05]
+
+#Learner parameters
+gamma: 0.9
+batch_size: 20 #128
+
+learning_step: 10000 #400000
+target_update: 5 #50
+min_replay_size: 20 #400
+
+#Actors parameters
+
+epsilon: 0.9
+update_replay: 50 #100
+update_network: 2 #30
+epsilon_decay: 0.995
+n_step: 3
+#epsilon_min: 0.01
+
+#Network parameters
+learning_rate: 0.01 #0.000001 #0.0001
+
+hidden_size1: 128 # 128
+hidden_size2: 128
+optimizer: "Adam"
+
+
+#parameters replay buffer
+size_buffer: 80000
+alpha: 0.6
+beta: 0.4
+epsilon_buffer: 0.00001
+
+seed : 2
+#Environment
+input_shape: 4
+n_actions: 2
